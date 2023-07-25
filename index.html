@@ -836,6 +836,7 @@
 <script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
 <script type="text/javascript" src="js/wow.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 <script>
 $(window).on("load", function() {
 		var wow = new WOW({
@@ -863,8 +864,21 @@ document.addEventListener("WeixinJSBridgeReady", function () {
              
  audio.play();});
 
+wx.config({
+                // 配置信息, 即使不正确也能使用 wx.ready
+                debug: false
+                , appId: ''
+                , timestamp: 1
+                , nonceStr: ''
+                , signature: ''
+                , jsApiList: []
+            });
+wx.ready(function () {
+              document.getElementById("bgmusic").play();
+            });
 
-           $("#btn-more").popover();
+$("#btn-more").popover();
+
 
 
 </script>
