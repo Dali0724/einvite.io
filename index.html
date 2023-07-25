@@ -750,12 +750,11 @@ function autoScroll() {
 }
 
 //autoScroll();
-var audio = document.getElementById('bg-music');  
-document.addEventListener("WeixinJSBridgeReady", function () {
-             
- audio.play();});
 
-wx.config({
+
+	window.onload = function(){
+      function autoPlayAudio() {
+            wx.config({
                 // 配置信息, 即使不正确也能使用 wx.ready
                 debug: false
                 , appId: ''
@@ -764,9 +763,12 @@ wx.config({
                 , signature: ''
                 , jsApiList: []
             });
-wx.ready(function () {
+            wx.ready(function () {
               document.getElementById("bg-music").play();
             });
+        }
+    autoPlayAudio();
+  }
 
 $("#btn-more").popover();
 
