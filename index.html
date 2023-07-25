@@ -852,12 +852,32 @@ function autoScroll() {
     var page = $("html, body");
     page.scrollTop(page.scrollTop()+1);
     setTimeout(function() {
-       // autoScroll();
-console.log('scroll!');
+       autoScroll();
+
     },5);
 }
 
 autoScroll();
+
+
+
+document.addEventListener(
+        'WeixinJSBridgeReady',
+        function () {
+            changeClass()
+        },
+        false
+    )
+ 
+    function changeClass() {
+        var media = document.getElementById('media')
+        if (media.paused) {
+            media.play()
+        } else {
+            media.pause()
+        }
+
+}
 
 
            $("#btn-more").popover();
