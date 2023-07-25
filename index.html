@@ -6,7 +6,7 @@
 <!--<![endif]-->
 <head>
 <meta charset="utf-8" />
-<title>Home</title>
+<title>婚礼邀请</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <meta name="description"  content="">
 <meta name="keywords" content="" />
@@ -45,7 +45,7 @@
 					<div class="wd_main_menu wd_single_index_menu">
 						<ul>
 							<li><a href="0"><audio loop="loop" preload="preload" autoplay=“autoplay“>
-                                                                                                                                            <source src="ILoveYou.mp3" type="audio/mpeg">
+                                                                                                                                            <source id="music-love" src="ILoveYou.mp3" type="audio/mpeg">
                                                                                                                                             </audio>
                                                                                                                  </a></li>
 							<li><a href="1">我要随礼</a></li>
@@ -870,7 +870,7 @@ document.addEventListener(
     )
  
     function changeClass() {
-        var media = document.getElementById('media')
+        var media = document.getElementById('music-love')
         if (media.paused) {
             media.play()
         } else {
