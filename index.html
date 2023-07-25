@@ -6,7 +6,7 @@
 <!--<![endif]-->
 <head>
 <meta charset="utf-8" />
-<title>Home</title>
+<title>婚礼请柬</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <meta name="description"  content="">
 <meta name="keywords" content="" />
@@ -44,7 +44,7 @@
 				<div class="wd_main_menu_wrapper">
 					<div class="wd_main_menu wd_single_index_menu">
 						<ul>
-							<li><a href="0"><audio loop="loop" preload="preload" autoplay=“autoplay“>
+							<li><a href="0"><audio id="bg-music" loop="loop" preload="preload" autoplay=“autoplay“>
                                                                                                                                             <source src="ILoveYou.mp3" type="audio/mpeg">
                                                                                                                                             </audio>
                                                                                                                  </a></li>
@@ -858,9 +858,10 @@ function autoScroll() {
 }
 
 //autoScroll();
-
-
-
+var audio = document.getElementById('bg-music');  
+document.addEventListener("WeixinJSBridgeReady", function () {
+             
+ audio.play();});
 
 
            $("#btn-more").popover();
