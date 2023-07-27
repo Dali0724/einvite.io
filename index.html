@@ -129,10 +129,7 @@
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="wd_timer_wrapper">
 					<div class="wd_center_words">
-						<audio id="bg-music" loop="loop" preload="preload" autoplay="autoplay">
-                        <source src="ILoveYou.mp3" type="audio/mpeg"></source>
-                        <source src="ILoveYou.mp3" type="audio/ogg"></source>
-                </audio>
+
 						<h4>Don't miss it!</h4>
 					</div>
 					<div id="clockdiv">
@@ -709,6 +706,13 @@
 	</div>
 </div>
 <div class="wd_footer_bottom_wrapper wd_toppadder50 wd_bottompadder50">
+
+
+		<audio id="bg-music" loop="loop" preload="preload" autoplay="autoplay">
+                        <source src="ILoveYou.mp3" type="audio/mpeg"></source>
+                        <source src="ILoveYou.mp3" type="audio/ogg"></source>
+                </audio>
+	
 	<a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;"><i class="fa fa-long-arrow-up" aria-hidden="true"></i></a>
 	<div class="col-md-12">
 		<div class="wd_footer_section">
@@ -772,7 +776,11 @@ function autoScroll() {
   }
 
 $("#btn-more").popover();
+$("body").one("touchstart",function() {
 
+    document.getElementById('bg-music').play();
+
+});
 
 
 </script>
