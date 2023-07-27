@@ -1766,7 +1766,7 @@ textarea:focus {
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    background-color: #6b6ee9;
+    background-color: #EE0000;
 }
 /*-- Responsive css Start --*/
 @media (max-width: 1200px) {}
